@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="container">
+    <form class="form-horizontal" method="post" action="https://www.mobile88.com/ePayment/entry.asp" role="form">
+      <div class="form-group">
+        <label class="col-xs-2 control-label">MerchantCode</label>
+        <div class="col-xs-5">
+          <input type="text" name="MerchantCode" value="<%= @MerchantCode %>" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">PaymentId</label>
+        <div class="col-xs-5">
+          <input type="text" name="PaymentId" value="<%= @PaymentId %>" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">RefNo</label>
+        <div class="col-xs-5">
+          <input type="text" name="RefNo" value="<%= @RefNo %>" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">Amount</label>
+        <div class="col-xs-5">
+          <input type="text" name="Amount" value="<%= @Amount %>" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">Currency</label>
+        <div class="col-xs-5">
+          <input type="text" name="Currency" value="MYR" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">ProdDesc</label>
+        <div class="col-xs-5">
+          <input type="text" name="ProdDesc" value="Photo Print" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">UserName</label>
+        <div class="col-xs-5">
+          <input type="text" name="UserName" value="John Tan" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">UserEmail</label>
+        <div class="col-xs-5">
+          <input type="text" name="UserEmail" value="john@hotmail.com" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">UserContact</label>
+        <div class="col-xs-5">
+          <input type="text" name="UserContact" value="0126500100" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">Remark</label>
+        <div class="col-xs-5">
+          <input type="text" name="Amount" value="" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">Lang</label>
+        <div class="col-xs-5">
+          <input type="text" name="Lang" value="UTF-8" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-xs-2 control-label">Signature</label>
+        <div class="col-xs-5">
+          <input type="text" name="Signature" value="<%= @sign %>" />
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-5">
+          <button type="submit" class="btn btn-primary btn-flat">Proceed with Payment</button>
+        </div>
+      </div>
+      <input type="hidden" name="ResponseURL" value="http://localhost:8000/ipay/responsex" />
+      <input type="hidden" name="BackendURL" value="http://localhost:8000/ipay/bresponsex" />
+    </form>
+  </div>
+</div>

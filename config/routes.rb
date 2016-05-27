@@ -2,9 +2,15 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  get '/home' => 'home#index'
-  get '/home/data' => 'home#data'
-  get '/home/rec' => 'home#rec'
+  root 'home#index'
+  match '/home/data' => 'home#data', as: :home_data, via: :get
+  match '/home/rec' => 'home#rec', as: :home_rec, via: :get
+  match '/home/mail' => 'home#mail', as: :home_mail, via: :get
+  match '/home/submit' => 'home#submit', as: :home_submit, via: :post
+
+  match '/ipay/index' => 'ipay#index', as: :ipay_index, via: :get
+  match '/ipay/responsex' => 'ipay#responsex', as: :ipay_responsex, via: [:get, :post]
+  match '/ipay/bresponsex' => 'ipay#bresponsex', as: :ipay_bresponsex, via: [:get, :post]
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
