@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   match '/home/submit' => 'home#submit', as: :home_submit, via: :post
 
   match '/ipay/index' => 'ipay#index', as: :ipay_index, via: :get
-  match '/ipay/responsex' => 'ipay#responsex', as: :ipay_responsex, via: [:get, :post]
-  match '/ipay/bresponsex' => 'ipay#bresponsex', as: :ipay_bresponsex, via: [:get, :post]
+  match '/ipay/resp' => 'ipay#resp', as: :ipay_resp, via: :post
+  match '/ipay/bresp' => 'ipay#bresp', as: :ipay_bresp, via: :post
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
