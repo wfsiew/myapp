@@ -1,0 +1,1 @@
+thin -p 8000 -R config.ru -e production --threadpool-size 50 start

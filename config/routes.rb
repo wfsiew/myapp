@@ -3,14 +3,15 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'home#index'
-  match '/home/data' => 'home#data', as: :home_data, via: :get
-  match '/home/rec' => 'home#rec', as: :home_rec, via: :get
-  match '/home/mail' => 'home#mail', as: :home_mail, via: :get
-  match '/home/submit' => 'home#submit', as: :home_submit, via: :post
+  match 'home/data' => 'home#data', as: :home_data, via: :get
+  match 'home/rec' => 'home#rec', as: :home_rec, via: :get
+  match 'home/mail' => 'home#mail', as: :home_mail, via: :get
+  match 'home/submit' => 'home#submit', as: :home_submit, via: :post
+  match 'home/tests' => 'home#tests', as: :home_tests, via: :get
 
-  match '/ipay/index' => 'ipay#index', as: :ipay_index, via: :get
-  match '/ipay/resp' => 'ipay#resp', as: :ipay_resp, via: :post
-  match '/ipay/bresp' => 'ipay#bresp', as: :ipay_bresp, via: :post
+  match 'ipay/index' => 'ipay#index', as: :ipay_index, via: :get
+  match 'ipay/resp' => 'ipay#resp', as: :ipay_resp, via: :post
+  match 'ipay/bresp' => 'ipay#bresp', as: :ipay_bresp, via: :post
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
