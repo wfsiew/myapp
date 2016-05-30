@@ -3,15 +3,20 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   root 'home#index'
-  match 'home/data' => 'home#data', as: :home_data, via: :get
-  match 'home/rec' => 'home#rec', as: :home_rec, via: :get
-  match 'home/mail' => 'home#mail', as: :home_mail, via: :get
-  match 'home/submit' => 'home#submit', as: :home_submit, via: :post
-  match 'home/tests' => 'home#tests', as: :home_tests, via: :get
+  get 'home/data' => 'home#data', as: :home_data
+  get 'home/rec' => 'home#rec', as: :home_rec
+  get 'home/mail' => 'home#mail', as: :home_mail
+  post 'home/submit' => 'home#submit', as: :home_submit
+  get 'home/tests' => 'home#tests', as: :home_tests
 
-  match 'ipay/index' => 'ipay#index', as: :ipay_index, via: :get
-  match 'ipay/resp' => 'ipay#resp', as: :ipay_resp, via: :post
-  match 'ipay/bresp' => 'ipay#bresp', as: :ipay_bresp, via: :post
+  get 'ipay/index' => 'ipay#index', as: :ipay_index
+  post 'ipay/resp' => 'ipay#resp', as: :ipay_resp
+  post 'ipay/bresp' => 'ipay#bresp', as: :ipay_bresp
+
+  get 'admin' => 'admin#index', as: :admin_index
+  get 'admin/login' => 'admin#new', as: :admin_login
+  get 'google/callback' => 'admin#callback', as: :admin_callback
+  get 'admin/logout' => 'admin#destroy', :as => :admin_logout
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
